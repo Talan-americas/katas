@@ -1,11 +1,10 @@
 package com.talan.interview.fizzbuzz;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FizzBuzzMain {
     public static void main(String[] args) {
-
         printResult(doFizzBuzz(100));
     }
 
@@ -16,10 +15,22 @@ public class FizzBuzzMain {
          * If element is multiple of 5, then output "Buzz" instead
          * If element is both, then output "FizzBuzz" instead
          */
+        List<String> returnList = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            String value = "";
+            if (i % 2 == 0) {
+                value = "Fizz";
+            }
+            if (i % 5 == 0) {
+                value += "Buzz";
+            }
+            if (value.equals("")) {
+                value = String.valueOf(i);
+            }
+            returnList.add(value);
+        }
 
-        //todo your code here
-
-        return Collections.emptyList();
+        return returnList;
     }
 
     public static void printResult(List<String> list) {
