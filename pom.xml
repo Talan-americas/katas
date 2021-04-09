@@ -19,6 +19,7 @@
     </properties>
     <modules>
         <module>interview/fizzbuzz</module>
+        <module>katas/tdd</module>
     </modules>
 
     <build>
