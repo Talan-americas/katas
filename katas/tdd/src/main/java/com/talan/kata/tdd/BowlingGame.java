@@ -1,5 +1,8 @@
 package com.talan.kata.tdd;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BowlingGame {
 
     /*
@@ -11,5 +14,16 @@ public class BowlingGame {
      * - Only one player
      * - All inputs will be valid (no negative score, no weird rolls, proper number of roll and frames)
      */
+
+    List<Integer> rolls = new ArrayList<>();
+
+    public int roll(int p) {
+        rolls.add(p);
+        return p;
+    }
+
+    public int getScore() {
+        return rolls.stream().mapToInt(Integer::intValue).sum();
+    }
 
 }
