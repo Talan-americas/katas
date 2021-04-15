@@ -1,5 +1,6 @@
 package com.talan.interview.fizzbuzz;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class FizzBuzzMain {
          */
 
         //todo your code here
+        List<String> test = new ArrayList<>();
 
         return Collections.emptyList();
     }
@@ -25,6 +27,7 @@ public class FizzBuzzMain {
     public static void printResult(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.println("Row " + i + ":" + list.get(i));
+
         }
     }
 }
