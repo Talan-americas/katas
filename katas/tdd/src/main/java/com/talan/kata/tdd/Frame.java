@@ -2,8 +2,8 @@ package com.talan.kata.tdd;
 
 public class Frame {
 
-    private final State state;
-    private final Roll roll;
+    private State state;
+    private Roll roll;
     private int firstRoll, secondRoll;
 
     public Frame() {
@@ -25,6 +25,7 @@ public class Frame {
         if (roll.equals(Roll.NOROLL)) {
             firstRoll = rollInt;
             roll = Roll.ROLLONE;
+            // TO DO - HANDLE STRIKE
         } else {
             secondRoll = rollInt;
         }
