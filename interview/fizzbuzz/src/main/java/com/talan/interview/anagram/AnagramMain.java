@@ -18,9 +18,24 @@ public class AnagramMain {
      * @return true if words are anagrams, else returns false.
      */
     public static boolean areAnagrams(String firstWord, String secondWord) {
+        var firstWordSum = calculateWordSum(firstWord);
+        var secondWordSum = calculateWordSum(secondWord);
+        var bothWordsHaveSameSize = firstWord.length() == secondWord.length();
+        var bothWordsHaveSameSum = (firstWordSum == secondWordSum);
 
-        //todo your code here
-        return false;
+        //unitedd
+
+        return bothWordsHaveSameSize && bothWordsHaveSameSum;
+    }
+
+    private static long calculateWordSum(String word) {
+        long sum = 1L;
+
+        for (var i = 0; i < word.length(); i++) {
+            sum *= word.charAt(i);
+        }
+
+        return sum;
     }
 
     public static void testAndPrint(String firstWord, String secondWord) {
