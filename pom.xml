@@ -21,6 +21,7 @@
         <module>interview/fizzbuzz</module>
         <module>interview/anagram</module>
         <module>katas/tdd</module>
+        <module>katas/reactive</module>
     </modules>
 
     <build>
