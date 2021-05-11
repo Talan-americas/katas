@@ -6,8 +6,10 @@ import lombok.extern.log4j.Log4j2;
 public class AnagramMain {
 
     public static void main(String[] args) {
-
         testAndPrint("untied", "united");
+        testAndPrint("aab", "aba");
+        testAndPrint("aab", "abc");
+        testAndPrint("aaba", "caab");
     }
 
     /**
