@@ -7,9 +7,11 @@ public class AnagramMain {
 
     public static void main(String[] args) {
         testAndPrint("untied", "united");
+        testAndPrint("a", "a");
         testAndPrint("aab", "aba");
         testAndPrint("aab", "abc");
         testAndPrint("aaba", "caab");
+        testAndPrint("aba", "baab");
     }
 
     /**
