@@ -6,6 +6,7 @@ import lombok.extern.log4j.Log4j2;
 public class AnagramMain {
 
     public static void main(String[] args) {
+        testAndPrint("abc", "abc   ");
         testAndPrint("untied", "united");
         testAndPrint("a", "a");
         testAndPrint("aab", "aba");
@@ -28,7 +29,6 @@ public class AnagramMain {
     }
 
     public static void testAndPrint(String firstWord, String secondWord) {
-        log.info("Are \"" + firstWord + "\" and " + secondWord + " anagrams? " + areAnagrams(firstWord, secondWord));
-
+        log.info("Are \"" + firstWord + "\" and \"" + secondWord + "\" anagrams? " + areAnagrams(firstWord, secondWord));
     }
 }
