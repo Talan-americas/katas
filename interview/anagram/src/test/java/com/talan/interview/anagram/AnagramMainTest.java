@@ -19,5 +19,13 @@ class AnagramMainTest {
         // and you can use assertJ or usual junit assertions:
         assertThat(AnagramMain.areAnagrams("1", "2")).isFalse();
         assertFalse(AnagramMain.areAnagrams("1", "2"));
+
+        assertThat(AnagramMain.areAnagrams("abc", "abc   ")).isFalse(); // false (except if you want to trim input)
+        assertThat(AnagramMain.areAnagrams("untied", "united")).isTrue(); // true
+        assertThat(AnagramMain.areAnagrams("a", "a")).isTrue(); // true
+        assertThat(AnagramMain.areAnagrams("aab", "aba")).isTrue(); // true
+        assertThat(AnagramMain.areAnagrams("aab", "abc")).isFalse(); // false
+        assertThat(AnagramMain.areAnagrams("aaba", "caab")).isFalse(); // false 
+        assertThat(AnagramMain.areAnagrams("aba", "baab")).isFalse(); // false
     }
 }

@@ -6,13 +6,14 @@ import lombok.extern.log4j.Log4j2;
 public class AnagramMain {
 
     public static void main(String[] args) {
-        testAndPrint("abc", "abc   ");
-        testAndPrint("untied", "united");
-        testAndPrint("a", "a");
-        testAndPrint("aab", "aba");
-        testAndPrint("aab", "abc");
-        testAndPrint("aaba", "caab");
-        testAndPrint("aba", "baab");
+        testAndPrint("abc", "abc   "); // false (except if you want to trim input)
+        testAndPrint("untied", "united"); // true
+        testAndPrint("a", "a"); // true
+        testAndPrint("aab", "aba"); // true
+        testAndPrint("aab", "abc"); // false
+        testAndPrint("aaba", "caab"); // false
+        testAndPrint("aba", "baab"); // false
+        testAndPrint("aaaab", "aaaac"); // false
     }
 
     /**
